@@ -18,6 +18,15 @@ data "aws_iam_openid_connect_provider" "tfc_provider" {
   url = "https://${var.tfc_hostname}"
 }
 
+# Uncomment the resource below if you DON'T have an existing OIDC provider for Terraform Cloud
+# and comment out the data source above
+#
+# resource "aws_iam_openid_connect_provider" "tfc_provider" {
+#   url             = data.tls_certificate.tfc_certificate.url
+#   client_id_list  = [var.tfc_aws_audience]
+#   thumbprint_list = [data.tls_certificate.tfc_certificate.certificates[0].sha1_fingerprint]
+# }
+
 # Creates a role which can only be used by the specified Terraform
 # cloud workspace.
 #
