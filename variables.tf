@@ -15,7 +15,7 @@ variable "tfc_hostname" {
 
 variable "tfc_organization_name" {
   type        = string
-  description = "The name of your Terraform Cloud organization"
+  description = "The name of your HCP Terraform organization"
 }
 
 variable "tfc_project_name" {
