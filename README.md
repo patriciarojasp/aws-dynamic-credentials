@@ -130,11 +130,7 @@ By default, this configuration assumes you already have an OIDC provider for Ter
 
 ### Common Issues
 
-1. **"Resource not found" for TFC project**
-   - Verify your project name exists in TFC
-   - Check organization name spelling
-
-2. **"EntityAlreadyExists" for OIDC provider**
+1. **"EntityAlreadyExists" for OIDC provider**
    - You already have an OIDC provider (use the default data source configuration)
    - If you want to create a new one, see OIDC Provider Configuration above
 

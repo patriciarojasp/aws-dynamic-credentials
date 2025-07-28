@@ -15,13 +15,6 @@ provider "tfe" {
   hostname = var.tfc_hostname
 }
 
-# Data source used to grab the project under which a workspace will be created.
-#
-# https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/project
-data "tfe_project" "tfc_project" {
-  name         = var.tfc_project_name
-  organization = var.tfc_organization_name
-}
 
 # Create a global variable set for AWS authentication
 #
